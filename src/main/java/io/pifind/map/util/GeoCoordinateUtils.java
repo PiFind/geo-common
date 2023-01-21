@@ -49,9 +49,13 @@ public class GeoCoordinateUtils {
 
     /**
      * 判断坐标是否超出了中国
-     * @param lat
-     * @param lon
-     * @return
+     * @param lat 纬度
+     * @param lon 经度
+     * @return 返回值类型为 boolean
+     * <ul>
+     *     <li><b>坐标不在中国</b> - 返回 {@code true}</li>
+     *     <li><b>坐标在中国</b> - 返回 {@code false}</li>
+     * </ul>
      */
     public static boolean outOfChina(double lat, double lon) {
         if (lon < 72.004 || lon > 137.8347)
@@ -64,9 +68,9 @@ public class GeoCoordinateUtils {
     /**
      * 84 to 火星坐标系 (GCJ-02) World Geodetic System ==> Mars Geodetic System
      *
-     * @param lat
-     * @param lon
-     * @return
+     * @param lat 纬度
+     * @param lon 经度
+     * @return 转换后的坐标点
      */
     public static double[] WGS84ToGCJ02(double lat, double lon) {
         if (outOfChina(lat, lon)) {
@@ -128,9 +132,9 @@ public class GeoCoordinateUtils {
     /**
      * 将 WGS84 转为 BD09
      *
-     * @param lat
-     * @param lon
-     * @return
+     * @param lat 纬度
+     * @param lon 经度
+     * @return 转换后的坐标点
      */
     public static double[] WGS84ToBD09(double lat, double lon) {
         double[] gcj02 = WGS84ToGCJ02(lat, lon);
