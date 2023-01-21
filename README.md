@@ -2,6 +2,12 @@
 
 主要包含了地理工具类、地理模型的实体类等
 
+## 包介绍
+
+* [constant](src/main/java/io/pifind/map/constant) : 常量包
+* [model](src/main/java/io/pifind/map/model) : 地理模型实体类包
+* [util](src/main/java/io/pifind/map/util) : 地理工具类包
+
 ## Maven 引入方式
 
 **第一步** 请在 Maven 的 setting.xml 中添加如下服务器配置
